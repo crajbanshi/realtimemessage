@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello world</title>
+</head>
+
+<link rel='stylesheet' href='/css/chat.css' type='text/css' media='all' />
+
+<script src="/socket.io/socket.io.js"></script>
+
+<body>
+    <h1>Chat Application example using Node js, Socket.io</h1>
+
+    <div id="error-container"></div>
+
+    <div class="wrapper">
+        <div class="setuser" id="setuser">
+            <p>Welcome! Please choose a username.</p>
+            <div class="wrapper">
+                <input class="username" id="name" type="text" name="name" maxlength=20 placeholder="Enter a username" /><button onclick="setUsername()">Confirm</button>
+            </div>
+        </div>
+        <div class="dim"></div>
+
+
+        <div class="chat">
+            <div class="reminder">Welcome! <span class="name" id="usenamedisplay"></span></div>
+            <div class="userlist">
+                user
+            </div>
+            <div class="chatbox">
+                <div class="messages-wrapper" id="message-container">
+                    <div class="status">Searching for a partner...</div>
+                </div>
+            </div>
+            <div class="reply">
+                <div class="typing"></div>
+                <div class="wrapper">
+                    <input class="usermsg" id="message" type="text" placeholder="Say hello!" disabled/><button class="send" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>

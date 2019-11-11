@@ -35,9 +35,12 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+upload/*
 
 # TypeScript v1 declaration files
 typings/
+#log files
+log/
 
 # Optional npm cache directory
 .npm
@@ -59,3 +62,4 @@ typings/
 
 # next.js build output
 .next
+pm2.json
